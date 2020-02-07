@@ -34,7 +34,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.movies = dataDictionary["results"] as! [[String:Any]]
             self.tableView.reloadData()
 
-            print(dataDictionary)
+//            print(dataDictionary)
 
            }
         }
@@ -65,5 +65,20 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
         
        }
+    
+    // leave current screen and prepare new screen (send data)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Find the selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        // Pass the selected movie to the deatil view controller
+        let detailsViewController = segue.destination as! MovieDetailViewController
+        detailsViewController.movie = movie
+        
+        // deselcte the selcted gray row
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
 }
