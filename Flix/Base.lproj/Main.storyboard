@@ -237,6 +237,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Mg-KM-uV7">
                                 <rect key="frame" x="16" y="218" width="112" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RYI-vX-43k" appends="YES" id="bJQ-KG-sxw"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ot-e2-Gds">
                                 <rect key="frame" x="145" y="288" width="214" height="27"/>
@@ -274,8 +278,30 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfZ-ju-IYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="RYI-vX-43k">
+                    <connections>
+                        <action selector="onTap:" destination="ruw-LJ-alm" id="UAm-m7-wyK"/>
+                        <segue destination="uTA-Wf-EGU" kind="show" identifier="urlMovie" id="kZs-va-aDN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1128.8" y="1062.5615763546798"/>
+        </scene>
+        <!--Trailer View Controller-->
+        <scene sceneID="CI6-QW-1aZ">
+            <objects>
+                <viewController id="uTA-Wf-EGU" customClass="TrailerViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fYw-dq-hG3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eE0-ov-cWd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="t6i-C8-7IG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VPO-4X-0vo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1139" y="1719"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="mkn-Uu-dzo">

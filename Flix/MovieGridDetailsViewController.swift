@@ -46,6 +46,11 @@ class MovieGridDetailsViewController: UIViewController {
     }
     
 
+    @IBAction func onTap(_ sender: Any) {
+        // do the seque here
+        performSegue(withIdentifier: "urlMovie", sender: self)
+        print("Urlmovie clicked")
+    }
     /*
     // MARK: - Navigation
 
