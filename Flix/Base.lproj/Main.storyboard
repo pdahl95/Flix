@@ -127,6 +127,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QB-Gd-PTq">
+                                <rect key="frame" x="150" y="375" width="191" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zMg-r2-1SB"/>
@@ -134,6 +141,7 @@
                     <navigationItem key="navigationItem" id="3Oy-QU-5Cj"/>
                     <connections>
                         <outlet property="backdropView" destination="VqU-xc-2fg" id="o9L-94-edF"/>
+                        <outlet property="dateLabel" destination="7QB-Gd-PTq" id="OhO-wj-ZEc"/>
                         <outlet property="posterView" destination="jbe-ul-wWo" id="fbd-Ec-lej"/>
                         <outlet property="synopsisLabel" destination="48L-60-SVO" id="pp3-iW-JyA"/>
                         <outlet property="titleLabel" destination="DK3-g5-VvP" id="hKq-0A-QPv"/>
@@ -141,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Er1-xa-YKI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1402" y="1063"/>
+            <point key="canvasLocation" x="-1402.4000000000001" y="1062.5615763546798"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fOO-1r-FrO">
@@ -196,6 +204,7 @@
                                         <size key="customSize" width="185" height="250"/>
                                         <connections>
                                             <outlet property="posterView" destination="GZK-HY-Kaf" id="XfG-jM-91m"/>
+                                            <segue destination="ruw-LJ-alm" kind="show" id="eJx-SP-mDh"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -212,6 +221,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tda-fY-7SL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1128.8" y="395.32019704433498"/>
+        </scene>
+        <!--Movie Grid Details View Controller-->
+        <scene sceneID="ldL-ib-B9g">
+            <objects>
+                <viewController id="ruw-LJ-alm" customClass="MovieGridDetailsViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HYy-ue-IxI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mzl-ml-5DS">
+                                <rect key="frame" x="0.0" y="24" width="375" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Mg-KM-uV7">
+                                <rect key="frame" x="16" y="218" width="112" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ot-e2-Gds">
+                                <rect key="frame" x="145" y="288" width="214" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.95888036489999995" green="0.95967108010000002" blue="0.94192779059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acn-Gr-X5M">
+                                <rect key="frame" x="19" y="388" width="336" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.95888036489999995" green="0.95967108010000002" blue="0.94192779059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM2-Xy-HpE">
+                                <rect key="frame" x="145" y="323" width="210" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="occ-pT-yma"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VLq-tx-gV3"/>
+                    <connections>
+                        <outlet property="backdropView" destination="mzl-ml-5DS" id="hFO-Mg-bHp"/>
+                        <outlet property="dateLabel" destination="QM2-Xy-HpE" id="Kok-7Y-56K"/>
+                        <outlet property="posterView" destination="7Mg-KM-uV7" id="3jD-fN-T5c"/>
+                        <outlet property="synopsisLabel" destination="acn-Gr-X5M" id="K1n-5b-xOb"/>
+                        <outlet property="titleLabel" destination="5ot-e2-Gds" id="dYI-tp-D4s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cfZ-ju-IYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128.8" y="1062.5615763546798"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="mkn-Uu-dzo">
